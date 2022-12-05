@@ -9,13 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            Text("Home View")
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            Text("Profile View")
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle.fill")
+                }
         }
-        .padding()
+        //.tabViewStyle(PageTabViewStyle()) // Paged Tab Style
     }
 }
 
